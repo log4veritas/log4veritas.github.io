@@ -16,7 +16,7 @@
 
 /* add a border around the navigation bar */
 .topnav {
-  border: gray;
+  border: solid black;
   border-width: 100px 5px 10px 5px;
 }
 
