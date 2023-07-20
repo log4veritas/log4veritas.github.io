@@ -12,6 +12,10 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+}
+
+/* add a border around the navigation bar */
+.topnav {
   border: solid black;
   border-width: 50px 5px 5px 10px;
 }
