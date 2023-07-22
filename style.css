@@ -2,11 +2,11 @@
 .topnav {
   background-color: #333;
   overflow: hidden;
-  width: 65%;
+  width: 95%;
   margin: auto;
   border-style: solid;
   border-color: #f2f2f2;
-  border-width: 40px 5px 0px 5px;
+  border-width: 15px 5px 15px 5px;
 }
 
 /* Style the links inside the navigation bar */
@@ -17,16 +17,6 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-}
-
-/* style the header image and add a border*/
-.headimage {
-	width: 65%;
-	margin: auto;
-	background-color: #f2f2f2;
-	border-style: solid;
-	border-color: #f2f2f2;
-	border-width: 60px 5px 0px 5px;
 }
 
 /* Change the color of links on hover */
