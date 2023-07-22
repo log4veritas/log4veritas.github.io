@@ -3,8 +3,8 @@
   background-color: #f2f2f2;
   overflow: hidden;
   width: 95%;
-  margin: auto;
-  /* border-style: solid;
+  /* margin: auto;
+  border-style: solid;
   border-color: #f2f2f2;
   border-width: 15px 5px 15px 5px; */
 }
@@ -14,20 +14,22 @@
   float: left;
   color: black;
   text-align: center;
-  padding: 14px 16px;
+  border: 15px 15px;
   text-decoration: none;
-  font-size: 24px;
-}
+  font-size: 20px;
+}  
 
 /* Change the color of links on hover */
 .topnav a:hover {
   background-color: #ddd;
+  bornder-color: #ddd;
   color: black;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
   background-color: #ddd;
+  border-color: #ddd;
   color: black;
 }
 
