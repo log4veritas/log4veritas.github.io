@@ -1,0 +1,7 @@
+
+NOTES
+
+Use this to piece together HTML pages with other html pages
+
+<!--#include file="include_head.html" -->
+https://stackoverflow.com/questions/18712338/make-header-and-footer-files-to-be-included-in-multiple-html-pages

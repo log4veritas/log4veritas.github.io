@@ -62,6 +62,7 @@
     padding: 0px 2% 10px 2%;
     margin-left: 1.5%;
 }
+
 /* Style the buttons in the navigation sidebar */
 .btn-group button {
   background-color: white; 
@@ -73,20 +74,31 @@
   text-align: left;
   width: 85%;
   display: block;
-}
-	
+}	
 .btn-group button:hover {
   background-color: #cdcdcd;
   border-color: #cdcdcd;
 }
-
 .btn-group a {
 	text-decoration: none;
 	color: black;
 	font-size: 14px;
 }
-
-	
+/* style the secondary menu for selecting individual projects */
+.tile_menu {
+    padding: 15px;
+    width: 200px;
+    background-color: white;
+    float: center;
+}
+.tile_menu a {
+    text-decoration: none;
+    color: black;
+    float: middle;
+    padding: 15px;
+    background-color: #cdcdcd;
+    margin: auto;
+}	
 	
 	
 	
