@@ -62,7 +62,7 @@
     padding: 0px 2% 10px 2%;
     margin-left: 1.5%;
 }
-
+/* Style the buttons in the navigation sidebar */
 .btn-group button {
   background-color: white; 
   padding: 3px 10px; 
@@ -82,12 +82,8 @@
 
 .btn-group a {
 	text-decoration: none;
-	text-color: black;
+	color: black;
 	font-size: 14px;
-}
-
-.navigation a.active{
-    background color: cdcdcd;
 }
 
 	
