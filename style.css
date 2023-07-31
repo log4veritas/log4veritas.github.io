@@ -44,7 +44,7 @@
 }
 
 /* style the navigation sidebar on the left hand side */
-.navigation {
+.sidenav {
     border-radius: 5px;
     float: left;
     background-color: #f2f2f2;
