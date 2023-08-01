@@ -88,17 +88,19 @@
 .tile_menu {
     padding: 15px;
     width: 200px;
+    border-radius: 5px;
+    border: solid white;
     background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.tile_menu a {
+
+.tile_menu_text a {
     text-decoration: none;
     color: black;
     padding: 15px;
-    background-color: #cdcdcd;
-    margin: auto;
-}	
-	
-	
+    margin: 0 auto;
+}
+
 	
 	
 	
