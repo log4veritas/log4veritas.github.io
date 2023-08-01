@@ -92,6 +92,8 @@
     border: solid white;
     background-color: white;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin: 20px;
+    float: left;
 }
 
 .tile_menu_text a {
