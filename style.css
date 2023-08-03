@@ -8,6 +8,11 @@
     border-radius: 5px;
 }
 
+/* topnav logo styling*/
+.logo {
+    padding: 0px;
+}
+
 /* Style the links inside the navigation bar */
 .topnav a {
 	border-radius: 5px;
@@ -98,7 +103,6 @@
 .tile_menu_text a {
     text-decoration: none;
     color: black;
-    padding: 15px;
     margin: 0 auto;
 }
 
