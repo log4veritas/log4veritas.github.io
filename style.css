@@ -64,25 +64,24 @@
 }
 
 /* Style the buttons in the navigation sidebar */
-.btn-group button {
-  background-color: white; 
-  padding: 3px 10px; 
-  border: none;
-  border-color: white;
-  border-radius: 5px;
-  margin: 2px;
-  text-align: left;
-  width: 85%;
-  display: block;
-}	
-.btn-group button:hover {
+	
+.btn-group a:hover {
   background-color: #cdcdcd;
   border-color: #cdcdcd;
 }
 .btn-group a {
-	text-decoration: none;
-	color: black;
-	font-size: 14px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    background-color: white;
+    padding: 3px 10px;
+    border: none;
+    border-color: white;
+    border-radius: 5px;
+    margin: 2px;
+    text-align: left;
+    width: 85%;
+    display: block;
 }
 /* style the secondary menu for selecting individual projects */
 .tile_menu {

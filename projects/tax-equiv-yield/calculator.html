@@ -3,11 +3,50 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Tax Equivalent Yield</title>
+    <title>TEY Calculator</title>
+    <div w3-include-html="/include/header.html"></div>
 </head>
-    <body>
+<body>
 
-        <iframe width="1350" height="900" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=AAE1CB8E95DFFFA9%2120663&authkey=%21ACgWQDJVKptVmmc&em=2&wdAllowInteractivity=False&AllowTyping=True&ActiveCell='Tax%20Equivalent%20Yield'!E24&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+    <script>
+        function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /* Loop through a collection of all HTML elements: */
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+        /* Make an HTTP request using the attribute value as the file name: */
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+        if (this.readyState == 4) {
+        if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+        if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+        /* Remove the attribute, and call this function once more: */
+        elmnt.removeAttribute("w3-include-html");
+        includeHTML();
+        }
+        }
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /* Exit the function: */
+        return;
+        }
+        }
+        }
+    </script>
 
-    </body>
+    <div class="topnav" w3-include-html="/include/topnav.html"></div>
+    <hr />
+
+    <iframe width="1350" height="900" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=AAE1CB8E95DFFFA9%2120663&authkey=%21ACgWQDJVKptVmmc&em=2&wdAllowInteractivity=False&AllowTyping=True&ActiveCell='Tax%20Equivalent%20Yield'!E24&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+
+
+    <script>
+        includeHTML();
+    </script>
+
+</body>
 </html>
