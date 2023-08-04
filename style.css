@@ -106,7 +106,10 @@
     margin: 0 auto;
 }
 
-	
+.content-image {
+    float: right;
+    padding-left: 50px;
+}	
 	
 	
 	
