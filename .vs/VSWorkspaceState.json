@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\images",
+    "\\images\\resized",
+    "\\images\\resized\\common-vial",
+    "\\include",
+    "\\projects"
   ],
-  "SelectedNode": "\\C:\\Users\\jakob\\Source\\Repos\\GraveDesign.github.io",
+  "SelectedNode": "\\images\\resized\\common-vial",
   "PreviewInSolutionExplorer": false
 }
