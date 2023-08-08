@@ -109,8 +109,13 @@
 .content-image {
     float: right;
     padding-left: 50px;
-}	
-	
+}
+
+.image-bank {
+    width: 850px;
+    clear: both;
+}
+
 	
 	
 	
