@@ -4,7 +4,10 @@
     "\\images",
     "\\images\\resized",
     "\\images\\resized\\common-vial",
-    "\\projects"
+    "\\include",
+    "\\projects",
+    "\\projects\\bloodborne"
   ],
+  "SelectedNode": "\\images\\resized\\common-vial\\vial1.png",
   "PreviewInSolutionExplorer": false
 }
