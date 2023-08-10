@@ -1,13 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\images",
-    "\\images\\resized",
-    "\\images\\resized\\common-vial",
-    "\\include",
-    "\\projects",
-    "\\projects\\bloodborne"
+    "\\include"
   ],
-  "SelectedNode": "\\images\\resized\\common-vial\\vial1.png",
+  "SelectedNode": "\\include\\topnav.html",
   "PreviewInSolutionExplorer": false
 }
