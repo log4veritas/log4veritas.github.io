@@ -116,6 +116,7 @@
 .image-bank {
     width: 850px;
     clear: both;
+    text-decoration: none;
 }
 
 .footer {
@@ -127,6 +128,9 @@
     margin-top: 20px
 }
 	
+img {
+    padding: 10px; 
+}
 	
 	
 	
