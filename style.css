@@ -110,6 +110,7 @@
 .content-image {
     float: right;
     padding-left: 50px;
+    clear: both;
 }
 
 .image-bank {
