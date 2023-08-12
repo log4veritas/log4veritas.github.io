@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utc-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>  </title>
+
+    <div w3-include-html="/include/header.html"></div>
+</head>
+
+<body>
+    <script>
+        function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /* Loop through a collection of all HTML elements: */
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+        /* Make an HTTP request using the attribute value as the file name: */
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+        if (this.readyState == 4) {
+        if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+        if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+        /* Remove the attribute, and call this function once more: */
+        elmnt.removeAttribute("w3-include-html");
+        includeHTML();
+        }
+        }
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /* Exit the function: */
+        return;
+        }
+        }
+        }
+    </script>
+
+    <div class="topnav" w3-include-html="/include/topnav.html"></div>
+    <hr />
+
+    <div class="wrapper">
+
+        <!-- SIDE MENU -->
+        <div class="sidenav" w3-include-html="/include/sidenav.html"></div>
+
+        <!-- MAIN CONTENT -->
+        <div class="content">
+            <h2> Furniture </h2>
+
+
+            <div class="tile_menu">
+                <a href="/projects/furniture/drafting-table.html">
+                    <img src="https://raw.githubusercontent.com/GraveDesign/GraveDesign.github.io/main/images/resized/drafting-table/3d-render.png" alt="Drafting Table 3D Render" height="200" />
+                </a>
+                <p>
+                    <div class="tile_menu_text" style="text-align:center">
+                        <a href="/projects/furniture/drafting-table.html">
+                            <b> Drafting Table </b>
+                        </a>
+                    </div>
+                </p>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        includeHTML();
+    </script>
+
+
+</body>
+</html>
