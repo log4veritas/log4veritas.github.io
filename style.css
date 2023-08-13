@@ -21,6 +21,11 @@
     float: left;
 }
 
+.split {
+    float: right;
+    margin-right: 50px;
+}	
+
 /* Style the links inside the navigation bar */
 .topnav-items a {
 	border-radius: 5px;
@@ -32,7 +37,19 @@
     padding: 15px 15px;
     text-decoration: none;
     font-size: 18px;
-}  
+}
+
+.split a {
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
 
 /* Change the color of links on hover */
 .topnav a:hover {
@@ -136,9 +153,5 @@
     margin-top: 20px
 }
 	
-.split{
-    float: right;
-    margin-right: 50px;
-}	
-	
+
 	
