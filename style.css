@@ -116,7 +116,7 @@
 }
 /* style the secondary menu for selecting individual projects */
 .tile_menu {
-    padding: 15px;
+    padding: 10px;
     border-radius: 5px;
     border: solid white;
     background-color: white;
@@ -150,7 +150,6 @@
     width: 95%;
     margin: 0 auto;
     border-radius: 5px;
-    margin-top: 20px
 }
 	
 
