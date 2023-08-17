@@ -115,6 +115,41 @@
     width: 85%;
     display: block;
 }
+
+.btn-group {
+    clear: both;
+    margin: 30px auto;
+    width: 90%;
+}
+
+.dld-group a {
+    clear: both;
+    margin: 5px auto;
+    width: 90%;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    background-color: white;
+    padding: 3px 10px;
+    border: none;
+    border-color: white;
+    border-radius: 5px;
+    text-align: left;
+    display: block;
+}
+
+.dld-group {
+    clear: both;
+    margin: 0px auto;
+    width: 90%;
+    margin-bottom: 15px;
+}
+
+.dld-group a:hover {
+  background-color: #cdcdcd;
+  border-color: #cdcdcd;
+}
+
 /* style the secondary menu for selecting individual projects */
 .tile_menu {
     padding: 10px;
