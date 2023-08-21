@@ -95,7 +95,7 @@
     float: left;
     background-color: #f2f2f2;
     width: 64%;
-    padding: 0px 2% 0px 2%;
+    padding: 0px 2% 30px 2%;
     margin-left: 1.5%;
     margin-bottom: 13px;
 }
@@ -183,6 +183,12 @@
     width: 850px;
     clear: both;
     text-decoration: none;
+}
+
+.hspan-image img {
+    clear: both;
+    margin: 0 auto;
+    width: 75%;
 }
 
 .footer {
