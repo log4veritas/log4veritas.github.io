@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\include"
+    "\\projects",
+    "\\projects\\bloodborne"
   ],
-  "SelectedNode": "\\include\\topnav.html",
+  "SelectedNode": "\\projects\\bloodborne\\cainhurst-summons.html",
   "PreviewInSolutionExplorer": false
 }
