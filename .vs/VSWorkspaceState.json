@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\images",
+    "\\images\\highres",
+    "\\include",
     "\\projects",
     "\\projects\\bloodborne"
   ],
-  "SelectedNode": "\\projects\\bloodborne\\cainhurst-summons.html",
+  "SelectedNode": "\\Test.html",
   "PreviewInSolutionExplorer": false
 }
