@@ -1,0 +1,4 @@
+Logo colors:
+
+Red: 800000ff
+Blue: 00004eff

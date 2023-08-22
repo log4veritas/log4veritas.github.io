@@ -204,7 +204,11 @@
 }
 
 .home-title-image{
-    height: 100px;
+    padding: 25px 0;
+    margin: 0 auto;
+}
+
+.home-subtitle-image {
     padding: 25px 0;
     margin: 0 auto;
 }
