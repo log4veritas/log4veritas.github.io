@@ -98,6 +98,7 @@
     padding: 0px 2% 30px 2%;
     margin-left: 1.5%;
     margin-bottom: 13px;
+    min-height: 100vh;
 }
 
 /* Style the buttons in the navigation sidebar */
