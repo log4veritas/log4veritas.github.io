@@ -46,8 +46,9 @@
         }
     </style>
 
-    <script type="text/javascript"
-         src="https://d3eoax9i5htok0.cloudfront.net/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
 
 </head>
@@ -107,43 +108,44 @@
         <div class="content">
             <!-- KEEP THIS -->
 
-
-\bigskip\par\textbf{1.1.9 Vertex degrees in bipartite graphs.}
-\par\smallskip
-Let $G[X,Y]$ be a bipartite graph.
-\par\smallskip
-(a) Show that $\sum_{v\in X}d(v)=\sum_{v\in Y}d(v)$
-\par
-(b) Deduce that if $G$ is $k$-regular, with $k \geq 1$, then $|X|=|Y|$.
-\par\smallskip
-\textbf{(a)} Consider the bipartite adjacendy matrix. It looks something like this:
-\[A= \left[ 
-\begin{array}{cc | ccc}
-    0 & 0 &  a_{1,3}  & \cdots & a_{1,n} \\
-     0 & 0 & a_{2,3}  & \cdots & a_{2,n} \\
- \hline
-     a_{3,1} & a_{3,2} & 0  & \cdots & 0 \\
-      \vdots & \vdots & \vdots  & \ddots & \vdots \\
-     a_{n,1} & a_{n,2} & 0  & \cdots & 0 \\
-\end{array} \right]
-\]
-Let the partitions above the horizontal line be part of $X$ and the partitions below the horizontal line $Y$.
-\par\medskip
-The row sum is the number of edges connected to the respective vertex (each row corresponds to a vertex in the adjascency matrix). The sum of row $i$ is therefore $d(v_i)$. Similarly, the sum of column $j$ is $d(v_j)$.
-\par\medskip
-The form of the adjacency matrix for a general bipartite graph is 
-\[ A=
-\begin{bmatrix}
-0 & B\\
-B^T & 0\\
-\end{bmatrix}
-\]
-since each edge has an endpoint in both $X$ and $Y$. So it follows that
-$$\sum_{v\in V}d(v)=2\sum_{b\in B}b=2\sum_{b\in B^T}b$$
-Then since the elements in $B$ are the same as those in the partition that corresponds to $X$ (and the elements in $B^T$ are the same as those that correspond to the $Y$ partition), and recalling that the sum of elements in row (column) $i$ is equal to $d(v_i)$, we have
-$$2\sum_{b\in B}b=2\sum_{v\in X}d(v)=2\sum_{v\in Y}d(v)=2\sum_{b\in B^T}b$$
-which is equivalent to the desired result:
-$$\sum_{v\in X}d(v)=\sum_{v\in Y}d(v)$$
+            <p>
+                \bigskip\par\textbf{1.1.9 Vertex degrees in bipartite graphs.}
+                \par\smallskip
+                Let $G[X,Y]$ be a bipartite graph.
+                \par\smallskip
+                (a) Show that $\sum_{v\in X}d(v)=\sum_{v\in Y}d(v)$
+                \par
+                (b) Deduce that if $G$ is $k$-regular, with $k \geq 1$, then $|X|=|Y|$.
+                \par\smallskip
+                \textbf{(a)} Consider the bipartite adjacendy matrix. It looks something like this:
+                \[A= \left[ 
+                \begin{array}{cc | ccc}
+                    0 & 0 &  a_{1,3}  & \cdots & a_{1,n} \\
+                     0 & 0 & a_{2,3}  & \cdots & a_{2,n} \\
+                 \hline
+                     a_{3,1} & a_{3,2} & 0  & \cdots & 0 \\
+                      \vdots & \vdots & \vdots  & \ddots & \vdots \\
+                     a_{n,1} & a_{n,2} & 0  & \cdots & 0 \\
+                \end{array} \right]
+                \]
+                Let the partitions above the horizontal line be part of $X$ and the partitions below the horizontal line $Y$.
+                \par\medskip
+                The row sum is the number of edges connected to the respective vertex (each row corresponds to a vertex in the adjascency matrix). The sum of row $i$ is therefore $d(v_i)$. Similarly, the sum of column $j$ is $d(v_j)$.
+                \par\medskip
+                The form of the adjacency matrix for a general bipartite graph is 
+                \[ A=
+                \begin{bmatrix}
+                0 & B\\
+                B^T & 0\\
+                \end{bmatrix}
+                \]
+                since each edge has an endpoint in both $X$ and $Y$. So it follows that
+                $$\sum_{v\in V}d(v)=2\sum_{b\in B}b=2\sum_{b\in B^T}b$$
+                Then since the elements in $B$ are the same as those in the partition that corresponds to $X$ (and the elements in $B^T$ are the same as those that correspond to the $Y$ partition), and recalling that the sum of elements in row (column) $i$ is equal to $d(v_i)$, we have
+                $$2\sum_{b\in B}b=2\sum_{v\in X}d(v)=2\sum_{v\in Y}d(v)=2\sum_{b\in B^T}b$$
+                which is equivalent to the desired result:
+                $$\sum_{v\in X}d(v)=\sum_{v\in Y}d(v)$$
+            </p>
 
 
 
