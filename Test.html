@@ -46,6 +46,16 @@
         }
     </style>
 
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            processEscapes: true
+          }
+        });
+    </script>
+
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
@@ -108,6 +118,8 @@
         <div class="content">
             <!-- KEEP THIS -->
 
+
+
             <p>
                 \bigskip\par\textbf{1.1.9 Vertex degrees in bipartite graphs.}
                 \par\smallskip
@@ -118,21 +130,21 @@
                 (b) Deduce that if $G$ is $k$-regular, with $k \geq 1$, then $|X|=|Y|$.
                 \par\smallskip
                 \textbf{(a)} Consider the bipartite adjacendy matrix. It looks something like this:
-                \[A= \left[ 
+                \[A= \left[
                 \begin{array}{cc | ccc}
-                    0 & 0 &  a_{1,3}  & \cdots & a_{1,n} \\
-                     0 & 0 & a_{2,3}  & \cdots & a_{2,n} \\
-                 \hline
-                     a_{3,1} & a_{3,2} & 0  & \cdots & 0 \\
-                      \vdots & \vdots & \vdots  & \ddots & \vdots \\
-                     a_{n,1} & a_{n,2} & 0  & \cdots & 0 \\
+                0 & 0 &  a_{1,3}  & \cdots & a_{1,n} \\
+                0 & 0 & a_{2,3}  & \cdots & a_{2,n} \\
+                \hline
+                a_{3,1} & a_{3,2} & 0  & \cdots & 0 \\
+                \vdots & \vdots & \vdots  & \ddots & \vdots \\
+                a_{n,1} & a_{n,2} & 0  & \cdots & 0 \\
                 \end{array} \right]
                 \]
                 Let the partitions above the horizontal line be part of $X$ and the partitions below the horizontal line $Y$.
                 \par\medskip
                 The row sum is the number of edges connected to the respective vertex (each row corresponds to a vertex in the adjascency matrix). The sum of row $i$ is therefore $d(v_i)$. Similarly, the sum of column $j$ is $d(v_j)$.
                 \par\medskip
-                The form of the adjacency matrix for a general bipartite graph is 
+                The form of the adjacency matrix for a general bipartite graph is
                 \[ A=
                 \begin{bmatrix}
                 0 & B\\
