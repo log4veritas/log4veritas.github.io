@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utc-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>  </title>
+
+    <div w3-include-html="/include/header.html"></div>
+</head>
+
+<body>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /* Exit the function: */
+                    return;
+                }
+            }
+        }
+    </script>
+
+    <div class="topnav" w3-include-html="/include/topnav.html"></div>
+    <hr/>
+
+    <div class="wrapper">
+
+        <!-- SIDE MENU -->
+        <div class="sidenav" w3-include-html="/include/sidenav-ampc.html"></div>
+
+        <!-- MAIN CONTENT -->
+        <div class="content">
+            <h2> AMPC </h2>
+
+
+
+
+
+            <div class="tile_menu">
+                <a href="/ampc/bloodborne.html">
+                    <img src="/ampc/images/resized/bloodborne/tile.png" alt="Bloodborne" height="200" />
+                </a>
+                <p>
+                    <div class="tile_menu_text" style="text-align:center">
+                        <a href="/ampc/bloodborne.html">
+                            <b> Bloodborne </b>
+                        </a>
+                    </div>
+                </p>
+            </div>
+
+            <div class="tile_menu">
+                <a href="/ampc/elden-ring.html">
+                    <img src="/ampc/images/resized/elden-ring/tile.png" alt="Elden Ring" height="200" />
+                </a>
+                <p>
+                    <div class="tile_menu_text" style="text-align:center">
+                        <a href="/ampc/elden-ring.html">
+                            <b> Elden Ring </b>
+                        </a>
+                    </div>
+                </p>
+            </div>
+
+            <div class="tile_menu">
+                <a href="/ampc/hollow-knight.html">
+                    <img src="/ampc/images/resized/hollow-knight/tile.png" alt="Hollow Knight" height="200" />
+                </a>
+                <p>
+                    <div class="tile_menu_text" style="text-align:center">
+                        <a href="/ampc/hollow-knight.html">
+                            <b> Hollow Knight </b>
+                        </a>
+                    </div>
+                </p>
+            </div>
+
+            <div class="tile_menu">
+                <a href="/ampc/skyrim.html">
+                    <img src="/ampc/images/resized/skyrim/tile.png" alt="Skyrim" height="200" />
+                </a>
+                <p>
+                    <div class="tile_menu_text" style="text-align:center">
+                        <a href="/ampc/skyrim.html">
+                            <b> Skyrim </b>
+                        </a>
+                    </div>
+                </p>
+            </div>
+
+            <h2>Original Builds</h2>
+            <div class="tile_menu">
+                <a href="/ampc/furniture.html">
+                    <img src="/ampc/images/resized/drafting-table/3d-render.png" alt="Furniture" height="200" />
+                </a>
+                <p>
+                    <div class="tile_menu_text" style="text-align:center">
+                        <a href="/ampc/furniture.html">
+                            <b> Drafting Table </b>
+                        </a>
+                    </div>
+                </p>
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <hr\>
+    
+    <div class="footer" w3-include-html="/include/footer.html"></div>
+
+
+    <script>
+        includeHTML();
+    </script>
+
+
+</body>
+</html>
