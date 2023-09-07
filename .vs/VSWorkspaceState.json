@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\bsqs",
+    "\\bsqs\\finance",
+    "\\bsqs\\finance\\quant-modeling",
+    "\\bsqs\\finance\\quant-modeling\\ruin-theory",
+    "\\bsqs\\finance\\quant-modeling\\ruin-theory\\discrete-model",
+    "\\bsqs\\mathematics\\graph-theory\\bondy-murty-2008"
   ],
-  "SelectedNode": "\\C:\\Users\\jakob\\Documents\\log4veritas",
   "PreviewInSolutionExplorer": false
 }
