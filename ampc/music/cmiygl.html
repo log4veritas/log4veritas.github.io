@@ -1,0 +1,126 @@
+﻿<!DOCTY<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utc-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>  </title>
+
+    <div w3-include-html="/include/header.html"></div>
+</head>
+
+<body>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /* Exit the function: */
+                    return;
+                }
+            }
+        }
+    </script>
+
+    <div class="topnav" w3-include-html="/include/topnav.html"></div>
+    <hr />
+
+    <div class="wrapper">
+
+        <!-- SIDE MENU -->
+        <div class="sidenav" w3-include-html="/include/sidenav.html"></div>
+
+        <!-- MAIN CONTENT -->
+        <div class="content">
+            <h2> Call Me If You Get Lost: License to Travel </h2>
+
+            <p>
+                Tyler, The Creator's 2021 album <i>Call Me If You Get Lost</i> has a "License To Travel" on the cover, issued to one Tyler Baudeline, Tyler's persona du jour.
+                On this page, we have all the parts needed to create a replica of this license, whether it's your own name and picture, or Tyler's.
+            </p>
+
+            <p>
+                Fist, here is the image of the Travel License itself. It is riped right off the album cover.
+            </p>
+
+            <center>
+                <img src="/ampc/images/resized/cmiygl-tyler/original-license.webp" alt="Original License" height="200" />
+            </center>
+
+            <p>
+                Here is the front and back of the license with the headshot and text removed.
+                We don't know what the back looks like, so we left it black here and have included one idea further below.
+            </p>
+
+            <center>
+                <img src="/ampc/images/resized/cmiygl-tyler/blank-front.png" alt="Blank Front of License" height="200" style="padding: 0 10px" />
+                <img src="/ampc/images/resized/cmiygl-tyler/blank-back.png" alt="Black Back of License" height="200" style="padding: 0 10px" />
+            </center>
+
+            <p>
+                The original album cover looks like the headshot photo was pasted on top of the paper license. Some raised parts can be seen in the laminate cover.
+                The original Tyler Baudeline headshot is below. It should be printed on gloss photo paper.
+                Alternatively, paste in your own photo.
+            </p>
+
+            <p>
+                Because the original headshot was pasted on top of the blank license, we have included a version with the original text, but missing the photo.
+                Use this to make a 1:1 replica of the license.
+            </p>
+
+            <center>
+                <img src="/ampc/images/resized/cmiygl-tyler/semi-blank-front.png" alt="Semi Blank License Front" height="200" style="padding: 0 10px" />
+                <img src="/ampc/images/resized/cmiygl-tyler/tyler-mug.jpg" alt="Tyler's Headshot" height="200" style="padding: 0 10px" />
+            </center>
+
+            <p>
+                The back should have something on it. Here is one idea with the track list on the back. Make your own design with the blank template further up on this page.
+            </p>
+
+            <center>
+                <img src="/ampc/images/resized/cmiygl-tyler/track-list-back.png" alt="Back With Track List" height="200" style="padding: 0 10px" />
+            </center>
+
+            <p>
+                To finish off, after the headshot is pasted onto the front of the license, laminate the whole thing to give it a shiny protective coating.
+                The original one on the album is definitely laminated.
+            </p>
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+    <div class="footer" w3-include-html="/include/footer.html"></div>
+
+
+    <script>
+        includeHTML();
+    </script>
+
+
+</body>
+</html>
