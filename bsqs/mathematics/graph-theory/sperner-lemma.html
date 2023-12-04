@@ -8,6 +8,25 @@
     <title>  </title>
 
     <div w3-include-html="/include/header.html"></div>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            processEscapes: true
+          }
+        });
+    </script>
+
+    <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
 </head>
 
 <body>
@@ -68,6 +87,61 @@
             <center>
                 <iframe class="iframepdf" src="/bsqs/mathematics/graph-theory/sperner-lemma/sperner-lemma.pdf"></iframe>
             </center> 
+            
+                <p>The two-dimensional case is the one referred to most frequently. It is stated as follows:</p>
+                <p>Subdivide a triangle $ABC$ arbitrarily into a triangulation consisting of smaller triangles meeting 
+                    edge to edge. Then a Sperner colouring of the triangulation is defined as an assignment of three 
+                    colours to the vertices of the triangulation such that</p>
+                    <ul>
+                        <li>Each of the three vertices $A$, $B$, and $C$ of the initial triangle has a distinct colour</li>
+                        <li>The vertices that lie along any edge of triangle $ABC$ have only two colours, the two 
+                            colours at the endpoints of the edge. For example, each vertex on $\overline{AC}$ must 
+                            have the same colour as $A$ or $C$.</li>
+                    </ul>
+                <p>
+                    Then every Sperner colouring of every triangulation has at least one "rainbow triangle", a 
+                    smaller triangle in the triangulation that has its vertices coloured with all three 
+                    different colours. More precisely, there must be an odd number of rainbow triangles.
+                </p>
+                <center>
+                    <div class="image-bank">
+                        <img src="/bsqs/images/mathematics/sperner-lemma/triangulation.png" alt="Triangulation" height="200" />
+                        <img src="/bsqs/images/mathematics/sperner-lemma/derived-graph.png" alt="Derived Graph" height="200" />
+                    </div>
+                </center>
+
+            <h3>Proof</h3>
+
+                <p>Consider a graph $G$ build from the triangulation $T$ as follows:</p>
+                <p>The vertices of $G$ are the members (sub-triangles) of $T$ plus the area outside the 
+                    triangle. Two vertices are connected with an edge if their corresponding areas share 
+                    a common border with one endpoint coloured 1 and the other coloured 2 (for arbitrary 
+                    colours 1 and 2).</p>
+                <p>There must be an odd number of borders coloured $1-2$ on the edge $\overline{AB}$ simply 
+                    because $A$ would be coloured 1 and $B$ coloured 2. Therefore, the vertex of $G$ 
+                    corresponding to the outer area in $T$ always has an odd degree. </p>
+                <p>The Handshaking Lemma states that in a finite graph there is an even number of vertices 
+                    with an odd degree. Therefore the remaining graph excluding the outer area has an odd 
+                    number of vertices with an odd degree; i.e., at least one vertex with odd degree.</p>
+                <p>Clearly, the only possible degrees of a triangle from $T$ is $0,1,2$ and the degree 
+                    $1$ corresponds  to a triangle coloured with the three colours $1,2,3$ (degree 
+                    $0$ corresponds  to a triangle with no $2$ colourings, degree $2$ corresponds  
+                    with no $3$ colourings).</p>
+                <p>Then it must be the case that there is always a triangle coloured $1,2,3$, 
+                    and taking the slightly stronger conclusion, there is always an odd number 
+                    of such triangles.</p>
+                <p><i>Note:</i>The multi-dimensional case is proved by induction on the dimension 
+                    of a simplex.</p>
+
+            <h4>The Handshaking Lemma</h4>    
+                
+                <p>The Handshaking Lemma states that in every finite graph there must be an even 
+                    number of vertices for which $deg(v)$ is an odd number.</p>
+                    $$\sum_{v\in V}deg(v_i)=2|E|$$
+                <p>Each edge is incident to exactly two vertices. The degree of each vertex is defined 
+                    as the number of edges to which it is incident. So when we add up the degrees of 
+                    all the vertices, we are counting all the edges of the graph twice.</p>
+
 
 
         </div>
